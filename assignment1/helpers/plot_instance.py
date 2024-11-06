@@ -19,7 +19,7 @@ def plot_instance(
         A solution, consisting of the sequence of huts to visit in order.
     """
     center = (45.879781359601424, 6.9462292487021715)
-    map = folium.Map(location=center, zoom_start=10, width=900, height=900)
+    map = folium.Map(location=center, zoom_start=10, width=600, height=600)
 
     for node in data.nodes:
         folium.Marker(
