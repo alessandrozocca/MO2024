@@ -20,7 +20,7 @@ def plot_wind_farm(instance, solution, **kwargs):
     ax.scatter(*turbine_coords.T, s=100, label="turbine")
 
     for (x, y) in turbine_coords:
-        cir = plt.Circle((x, y), min_distance / 2, color="r", fill=False)
+        cir = plt.Circle((x, y), min_distance, color="r", fill=False)
         ax.add_patch(cir)
 
     ax.set_xlim(coords[:, 0].min() - 1, coords[:, 0].max() + 1)
