@@ -15,7 +15,7 @@ def generate_instance(x, y, **kwargs):
         "n_sites": x * y,
         "coords": coords,
         "production": 150,
-        "min_distance": kwargs.get("min_distance", 2.1),
+        "min_distance": kwargs.get("min_distance", 1.9),
         "min_turbines": kwargs.get("min_turbines", 3),
         "max_turbines": 8,
     }
