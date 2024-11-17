@@ -1,3 +1,3 @@
-from .generate_wind_farm_data import generate_wind_farm_data as generate_wind_farm_data
-from .plot_wind_farm import plot_wind_farm as plot_wind_farm
-from .read_economic_dispatch_data import ead_economic_dispatch_data as ead_economic_dispatch_data
+from .generate_wind_farm_data import generate_wind_farm_data
+from .plot_wind_farm import plot_wind_farm
+from .read_economic_dispatch_data import read_economic_dispatch_data
