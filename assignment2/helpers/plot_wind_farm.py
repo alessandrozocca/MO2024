@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-def plot_wind_farm(instance, solution, **kwargs):
+def plot_wind_farm(instance, solution, wind=None, **kwargs):
     coords = instance["coords"]
     min_distance = instance["min_distance"]
 
@@ -26,7 +26,10 @@ def plot_wind_farm(instance, solution, **kwargs):
     ax.set_xlim(coords[:, 0].min() - 1, coords[:, 0].max() + 1)
     ax.set_ylim(coords[:, 1].min() - 1, coords[:, 1].max() + 1)
 
-    ax.set_title(f"Wind farm layout\nSolution {solution}")
+    if wind is None:
+        ax.set_title(f"Wind farm layout\nSelected sites: {solution}")
+    else:
+        ax.set_title(f"Wind farm layout for wind {wind}\nSelected sites: {solution}")
     ax.legend()
     plt.tight_layout()
     plt.show()
