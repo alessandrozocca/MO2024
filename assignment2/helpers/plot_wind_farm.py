@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-def plot_wind_farm(instance, solution, wind=None, **kwargs):
+def plot_wind_farm(instance, solution, wind=None):
     coords = instance["coords"]
     min_distance = instance["min_distance"]
 
