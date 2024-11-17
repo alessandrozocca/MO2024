@@ -80,4 +80,4 @@ def generate_wind_farm_data(n_samples=45, x=6, y=6, seed=0):
             instance["coords"], wind_vectors[idx]
         )
 
-    return instance, interference_matrices
+    return instance, interference_matrices, wind_vectors
