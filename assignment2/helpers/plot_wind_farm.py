@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-def plot_wind_farm(instance, solution, wind=None):
+def plot_wind_farm(instance, selected_turbines, wind=None):
     coords = instance["coords"]
     min_distance = instance["min_distance"]
 
@@ -16,7 +16,7 @@ def plot_wind_farm(instance, solution, wind=None):
         margin = 0.05
         ax.annotate(idx, (coords[idx, 0] + margin, coords[idx, 1] + margin))
 
-    turbine_coords = coords[solution]
+    turbine_coords = coords[selected_turbines]
     ax.scatter(*turbine_coords.T, s=100, label="turbine")
 
     for (x, y) in turbine_coords:
@@ -27,9 +27,9 @@ def plot_wind_farm(instance, solution, wind=None):
     ax.set_ylim(coords[:, 1].min() - 1, coords[:, 1].max() + 1)
 
     if wind is None:
-        ax.set_title(f"Wind farm layout\nSelected sites: {solution}")
+        ax.set_title(f"Wind farm layout\nSelected sites: {selected_turbines}")
     else:
-        ax.set_title(f"Wind farm layout for wind {wind}\nSelected sites: {solution}")
+        ax.set_title(f"Wind farm layout for wind ({wind[0]:.3f}, {wind[1]:.3f})\nSelected sites: {selected_turbines}")
     ax.legend()
     plt.tight_layout()
     plt.show()
