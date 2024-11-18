@@ -1,3 +1,4 @@
+import numpy as np
 import matplotlib.pyplot as plt
 
 def add_wind_rose(ax, wind, inset_position=[1.1, 0.45, 0.32, 0.32]):
