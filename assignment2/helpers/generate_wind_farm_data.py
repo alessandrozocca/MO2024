@@ -52,10 +52,10 @@ def sample_wind_vector(seed):
     rng = np.random.default_rng(seed)
 
     target_angle = 0.4
-    width = 0.5
+    width = 0.6
     angle = np.pi * rng.uniform(target_angle - width, target_angle + width)
     wind_direction = np.array([np.cos(angle), np.sin(angle)])
-    wind_speed = 30 * rng.uniform() * np.cos(abs(angle - target_angle))
+    wind_speed = (6 + 24 * rng.uniform()) * np.cos(abs(angle - target_angle))
 
     return wind_direction * wind_speed
     
