@@ -37,8 +37,7 @@ def add_wind_rose(ax, wind, inset_position=[1.1, 0.45, 0.32, 0.32]):
     if normalized_magnitude > 0:
         inset_ax.quiver(
             0, 0, normalized_magnitude*np.cos(wind_angle), normalized_magnitude*np.sin(wind_angle),
-            # angles='xy', scale=1, scale_units='xy',
-            scale=2/(normalized_magnitude),
+            scale=1.95,
             color="green",
             width=0.02,
             headwidth=3, headlength=4.5,
