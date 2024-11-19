@@ -25,6 +25,5 @@ def sample_wind_production(
 
     windpowerA = samples[:, 0]
     windpowerB = samples[:, 1]
-    wind_combined = [windpowerA[i] + windpowerB[i] for i in range(len(windpowerA))]
 
-    return windpowerA, windpowerB, wind_combined
+    return windpowerA, windpowerB
