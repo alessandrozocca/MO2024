@@ -4,7 +4,7 @@ import numpy as np
 def sample_wind_production(
     n_samples=730,
     seed=0,
-    rho=0.0,
+    rho=-0.5,
     muA=460.06,
     muB=323.18,
     sigmaA=195.61,
