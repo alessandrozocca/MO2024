@@ -17,7 +17,7 @@ def generate_instance(x, y, **kwargs):
         "production": 150,
         "min_distance": kwargs.get("min_distance", 1.25),
         "min_turbines": kwargs.get("min_turbines", 3),
-        "max_turbines": 8,
+        "max_turbines": kwargs.get("max_turbines", 6),
     }
 
     return data
@@ -58,7 +58,7 @@ def sample_wind_vector(seed):
     wind_speed = (6 + 24 * rng.uniform()) * np.cos(abs(angle - target_angle))
 
     return wind_direction * wind_speed
-    
+
 
 def generate_wind_farm_data(n_samples=45, x=6, y=6, seed=0):
     """
