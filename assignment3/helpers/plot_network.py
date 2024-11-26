@@ -13,4 +13,4 @@ def plot_network(graph, *routes):
     else:
         cmap = cycle(TABLEAU_COLORS.keys())
         colors = [c for _, c in zip(routes, cmap)]
-        osmnx.plot_graph_routes(graph, routes, colors)
+        osmnx.plot_graph_routes(graph, routes, route_colors=colors)
